@@ -15,6 +15,12 @@
 body{
     background-color: var(--bcg-color);
 }
+h1{
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 2rem;
+    color: var(--font-color);
+}
 
 .wrapper {
     font-family: 'Lato', sans-serif;
@@ -22,10 +28,9 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-    height: 100vh;
+    height: 80vh;
     gap: 3rem;
     font-size: 1.5rem;
-    padding: 3rem;
     color: var(--font-color);
     letter-spacing: 1px;
 }
@@ -39,7 +44,7 @@ body{
     width: 450px;
 }
 
-button{
+.btn{
     padding: 0.8rem 1.8rem;
     cursor: pointer;
     background: none;
@@ -51,7 +56,7 @@ button{
     border: 1px solid var(--font-color);
     transition: 0.5s;
 }
-button:hover{
+.btn:hover{
    background-color: var(--font-color);
    color: var(--font-hover);
 }
