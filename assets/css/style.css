@@ -12,19 +12,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: var(--bcg-color);
+}
 
 .wrapper {
     font-family: 'Lato', sans-serif;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    justify-items: center;
     height: 100vh;
     gap: 3rem;
     font-size: 1.5rem;
-    background-color: var(--bcg-color);
+    padding: 3rem;
     color: var(--font-color);
     letter-spacing: 1px;
 }
+
+/* Converters Styles */
 .cell{
     display: flex;
     flex-direction: column;
@@ -68,4 +74,22 @@ button:hover{
 .input:focus{
     outline: none;
     box-shadow: 0 0 0 0.3rem var(--font-color)
+}
+/* Media queries */
+
+@media (max-width: 1460px){
+    .wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+    .converter-speed{
+        margin-left: 100%;
+    }
+} 
+@media (max-width: 970px){
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+    .converter-speed{
+        margin-left: 0;
+    }
 }
