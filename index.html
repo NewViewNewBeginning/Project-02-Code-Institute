@@ -6,20 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Basic converter for temperature, speed and lengths">
-    <meta name="keywords" content="Converter, conversion, celsius ,fahrenheit, speed, miles, km, meters, feet">
+    <meta name="keywords" content="Converter, conversion, celsius ,fahrenheit, speed, miles, km, meter, foot">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://kit.fontawesome.com/0d6dd7f645.js" crossorigin="anonymous"></script>
     <title>Converter</title>
 </head>
 
 <body>
-    <div class="converter-temp">
-        <label for="convert-tem">Converter <span class="convert-from">°C</span> for <span class="convert-to">°F</span></label>
-        <input type="number" id="converter-temp" placeholder="Type number...">
-        <div class="converter-btn">
-            <button class="convert">Convert</button>
-            <button class="change">Change sides</button>
-            <button class="reset">Reset</button>
+    <div class="wrapper">
+        <div class="converter-temp cell">
+            <label for="convert-tem">Converter <span class="convert-from">°C</span> for <span
+                    class="convert-to">°F</span></label>
+            <input type="number" id="converter-temp" placeholder="Type number...">
+            <div class="converter-btn">
+                <button class="convert">Convert</button>
+                <button class="change">Change sides</button>
+                <button class="reset">Reset</button>
+            </div>
+            <img src="#" alt="appropriate picture for temperature :)">
+        </div>
+        <div class="converter-length cell ">
+            <label for="convert-tem">Converter <span class="convert-from">Meter</span> for <span
+                    class="convert-to">Foot</span></label>
+            <input type="number" id="converter-length" placeholder="Type number...">
+            <div class="converter-btn">
+                <button class="convert">Convert</button>
+                <button class="change">Change sides</button>
+                <button class="reset">Reset</button>
+            </div>
+            <img src="#" alt="appropriate picture for length :)">
+        </div>
+        <div class="converter-speed cell">
+            <label for="convert-tem">Converter <span class="convert-from">KM/h</span> for <span
+                    class="convert-to">M/h</span></label>
+            <input type="number" id="converter-speed" placeholder="Type number...">
+            <div class="converter-btn">
+                <button class="convert">Convert</button>
+                <button class="change">Change sides</button>
+                <button class="reset">Reset</button>
+            </div>
+            <img src="#" alt="appropriate picture for speed :)">
         </div>
     </div>
     <script src="./assets/js/app.js"></script>
