@@ -14,6 +14,8 @@
 }
 body {
 	background-color: var(--bcg-color);
+    display: flex;
+    flex-direction: column;
 }
 h1 {
 	font-size: 2rem;
@@ -32,7 +34,7 @@ hr {
 	grid-template-columns: 1fr 1fr 1fr;
 	align-items: center;
 	justify-items: center;
-	height: 80vh;
+	/* height: 80vh; */
 	gap: 3rem;
 	font-size: 1.3rem;
 	color: var(--font-color);
@@ -88,6 +90,13 @@ img{
     width: 60%;
     border-radius: 0.5rem;
 }
+footer{
+    padding: 2rem;
+    color: var(--font-color);
+    text-align: center;
+    text-transform: uppercase;
+
+}
 
 /* Media queries */
 
@@ -107,4 +116,11 @@ img{
 	.converter-speed {
 		margin-right: 0;
 	}
+}
+@media (min-width: 970px){
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }

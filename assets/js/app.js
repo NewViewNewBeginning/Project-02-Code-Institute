@@ -1,3 +1,7 @@
+// Update and display current year in footer
+
+document.querySelector('.date').appendChild(document.createTextNode(new Date().getFullYear()))
+
 // Temperature converter
 
 // Variables needed to manipulate temperature converter
@@ -30,7 +34,6 @@ function convertTemp() {
 		resultTemp.style.color = "var(--font-color)";
 		if (fromTemp.textContent === "°C") {
 			celToFahr();
-           
 		} else {
 			fahrToCel();
 		}
@@ -43,31 +46,29 @@ function convertTemp() {
 function celToFahr() {
 	const fahr = tempConvInput.value * 1.8 + 32;
 	resultTemp.textContent = `${tempConvInput.value} °C is ${fahr.toFixed(2)}°F`;
-    if(fahr>77){
-        tempImg.src = "./assets/img/summer-hot.jpg"
-    }else if (fahr > 59){
-        tempImg.src = "./assets/img/spring-mid-hot.jpg"
-    } else if (fahr > 46){
-        tempImg.src = "./assets/img/autumn-mid-cold.jpg"
-    } else {
-        tempImg.src = "./assets/img/winter-cold.jpg"
-    }
-
+	if (fahr > 77) {
+		tempImg.src = "./assets/img/summer-hot.jpg";
+	} else if (fahr > 59) {
+		tempImg.src = "./assets/img/spring-mid-hot.jpg";
+	} else if (fahr > 46) {
+		tempImg.src = "./assets/img/autumn-mid-cold.jpg";
+	} else {
+		tempImg.src = "./assets/img/winter-cold.jpg";
+	}
 }
 function fahrToCel() {
 	const cel = (tempConvInput.value - 32) / 1.8;
 	resultTemp.textContent = `${tempConvInput.value} °F is ${cel.toFixed(2)}°C`;
-    console.log(cel)
-    if(cel>25){
-        tempImg.src = "./assets/img/summer-hot.jpg"
-    }else if (cel > 15){
-        tempImg.src = "./assets/img/spring-mid-hot.jpg"
-    } else if (cel > 8){
-        tempImg.src = "./assets/img/autumn-mid-cold.jpg"
-    } else {
-        tempImg.src = "./assets/img/winter-cold.jpg"
-    }
-
+	console.log(cel);
+	if (cel > 25) {
+		tempImg.src = "./assets/img/summer-hot.jpg";
+	} else if (cel > 15) {
+		tempImg.src = "./assets/img/spring-mid-hot.jpg";
+	} else if (cel > 8) {
+		tempImg.src = "./assets/img/autumn-mid-cold.jpg";
+	} else {
+		tempImg.src = "./assets/img/winter-cold.jpg";
+	}
 }
 
 function restetValues() {
@@ -82,11 +83,6 @@ function restetValues() {
 convTempBtn.addEventListener("click", convertTemp);
 changeTempBtn.addEventListener("click", swapTempValues);
 resetTempBtn.addEventListener("click", restetValues);
-
-
-
-
-
 
 // function addPictureForTemp() {
 //     if (fromTemp.textContent.includes("°C") || toTemp.textContent.includes("°C")) {
@@ -104,4 +100,4 @@ resetTempBtn.addEventListener("click", restetValues);
 // 	// });
 // }
 // }
-// addPictureForTemp() 
+// addPictureForTemp()
