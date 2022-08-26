@@ -24,11 +24,17 @@ function swapTempValues() {
 }
 
 function convertTemp() {
-	if (fromTemp.textContent === "°C") {
-		celToFahr();
-	} else {
-		fahrToCel();
-	}
+	if (tempConvInput.value !== "") {
+        resultTemp.style.color = 'var(--font-color)'
+		if (fromTemp.textContent === "°C") {
+			celToFahr();
+		} else {
+			fahrToCel();
+		}
+	}else{
+        resultTemp.textContent = "Please type number first!"
+        resultTemp.style.color = 'var(--warning-color)'
+    }
 }
 
 function celToFahr() {
