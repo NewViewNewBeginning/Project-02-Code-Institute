@@ -70,34 +70,64 @@ function fahrToCel() {
 		tempImg.src = "./assets/img/winter-cold.jpg";
 	}
 }
+// function restetValues() {
+//     fromTemp.textContent = "°C";
+//     toTemp.textContent = "°F";
+//     resultTemp.textContent = "Result:";
+//     resultTemp.style.color = "var(--font-color)";
+//     tempConvInput.value = "";
+// }
 
-function restetValues() {
-	fromTemp.textContent = "°C";
-	toTemp.textContent = "°F";
-	resultTemp.textContent = "Result:";
-	resultTemp.style.color = "var(--font-color)";
-	tempConvInput.value = "";
+// Meter Foot conversion
+
+function lengthConverter(){
+	// let meter = footNumberInput / 0.3048.toFixed(2)
+    //  let foot = meterNumber * 3.28084 .toFixed(2)
 }
+
+// Speed conversion
+
+function speedConverter(){
+    // let miles = km × 0.621371
+    // let km = miles × 1.609344
+}
+
 
 // Event Listeners
 convTempBtn.addEventListener("click", convertTemp);
 changeTempBtn.addEventListener("click", swapTempValues);
-resetTempBtn.addEventListener("click", restetValues);
+// resetTempBtn.addEventListener("click", restetValues);
 
-// function addPictureForTemp() {
-//     if (fromTemp.textContent.includes("°C") || toTemp.textContent.includes("°C")) {
-//         if(parseInt(resultTemp.textContent)){
-//             console.log('dziala')
-//         }
-// 	// // Handle number changes
-// 	// tempConvInput.addEventListener("input", function () {
-// 	// 	// As a number
-// 	// 	let num = tempConvInput.valueAsNumber;
-// 	// 	if (num > 25) {
-// 	// 		console.log(num);
-// 	// 		tempImg.src = "./assets/img/summer-hot.jpg";
-// 	// 	}
-// 	// });
-// }
-// }
-// addPictureForTemp()
+
+// 
+
+let btns = document.querySelectorAll('button')
+for(bt of btns){
+    bt.addEventListener('click',function checkBtn(e){
+        console.log(bt, e.target)
+        if(e.target.innerText === 'RESET'){
+            reset(e)
+        }
+    })
+}
+
+function reset(e){
+    let curParent = e.target.parentElement.parentElement
+    let inputClear = curParent.querySelector('.input').value = ""
+    let result = document.querySelector('p')
+    result.textContent = "Result:"
+    result.style.color = "var(--font-color)";
+    // Change values of conversion to default
+    let conLeft = curParent.querySelector('.convert-from')
+    let conRight = curParent.querySelector('.convert-to')
+    if(e.target.classList.contains('reset-temp')){
+        conLeft.textContent = "°C"
+        conRight.textContent = "°F"
+    }else if(e.target.classList.contains('reset-length')){
+        conLeft.textContent = 'Meter'
+        conRight.textContent = "Feet"
+    } else{
+        conLeft.textContent = 'KM/h'
+        conRight.textContent = "M/h"
+    }
+}
