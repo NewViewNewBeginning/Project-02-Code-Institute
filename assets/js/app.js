@@ -51,7 +51,7 @@ function celToFahr() {
 	} else if (fahr > 59) {
 		tempImg.src = "./assets/img/spring-mid-hot.jpg";
 	} else if (fahr > 46) {
-		tempImg.src = "./assets/img/autumn-mid-cold.jpg";
+		tempImg.src = "./assets/img/autun-mid-cold.jpg";
 	} else {
 		tempImg.src = "./assets/img/winter-cold.jpg";
 	}
@@ -65,7 +65,7 @@ function fahrToCel() {
 	} else if (cel > 15) {
 		tempImg.src = "./assets/img/spring-mid-hot.jpg";
 	} else if (cel > 8) {
-		tempImg.src = "./assets/img/autumn-mid-cold.jpg";
+		tempImg.src = "./assets/img/autun-mid-cold.jpg";
 	} else {
 		tempImg.src = "./assets/img/winter-cold.jpg";
 	}
