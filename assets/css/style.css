@@ -117,10 +117,15 @@ footer{
 		margin-right: 0;
 	}
 }
-@media (min-width: 970px){
-    footer{
-        position: absolute;
-        bottom: 0;
+@media (max-width: 560px){
+    .wrapper, .cell{
         width: 100%;
+    }
+}
+@media (max-width: 415px){
+    .converter-btn{
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.3rem;
     }
 }
