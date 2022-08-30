@@ -4,18 +4,40 @@ document
 	.querySelector(".date")
 	.appendChild(document.createTextNode(new Date().getFullYear()));
 
+//
+
+let btns = document.querySelectorAll("button");
+for (bt of btns) {
+	bt.addEventListener("click", function checkBtn(e) {
+		if (e.target.innerText === "RESET") {
+			reset(e);
+		} else if (e.target.innerText === "CHANGE SIDES") {
+			swapSide(e);
+		} else {
+			convert(e);
+		}
+	});
+}
+
+// CONVERTING CHOOSED VALUES
+
+function convert(e) {
+	let curParent = e.target.parentElement.parentElement;
+	if (curParent.querySelector("input").value !== "") {
+		// curParent.querySelector("p").style.color = "var(--font-color)";
+		if (e.target.classList.contains("temp-convert")) {
+			tempConverter(e);
+		} else if (e.target.classList.contains("length-convert")) {
+			lengthConverter(e);
+		} else {
+			speedConverter(e);
+		}
+	} else {
+		curParent.querySelector("p").textContent = "Please type number first!";
+		curParent.querySelector("p").style.color = "var(--warning-color)";
+	}
+}
 // Temperature converter
-
-// Variables needed to manipulate temperature converter
-// const tempConvInput = document.querySelector("#converter-temp");
-// const fromTemp = document.querySelector(".conv-from-temp");
-// const toTemp = document.querySelector(".conv-to-temp");
-// const resultTemp = document.querySelector(".res-temp");
-// const convTempBtn = document.querySelector(".btn-temp-conv");
-
-// const tempImg = document.querySelector(".temp-img");
-
-// Temperature converter functions
 
 function tempConverter(e) {
 	let curParent = e.target.parentElement.parentElement;
@@ -50,45 +72,23 @@ function tempConverter(e) {
 	}
 }
 
-//
-
-let btns = document.querySelectorAll("button");
-for (bt of btns) {
-	bt.addEventListener("click", function checkBtn(e) {
-		if (e.target.innerText === "RESET") {
-			reset(e);
-		} else if (e.target.innerText === "CHANGE SIDES") {
-			swapSide(e);
-		} else {
-			convert(e);
-		}
-	});
-}
-
-// CONVERTING CHOOSED VALUES
-
-function convert(e) {
-	let curParent = e.target.parentElement.parentElement;
-	if (curParent.querySelector("input").value !== "") {
-		// curParent.querySelector("p").style.color = "var(--font-color)";
-		if (e.target.classList.contains("temp-convert")) {
-			tempConverter(e);
-		} else if (e.target.classList.contains("length-convert")) {
-			lengthConverter(e);
-		} else {
-			speedConverter(e);
-		}
-	} else {
-		curParent.querySelector("p").textContent = "Please type number first!";
-		curParent.querySelector("p").style.color = "var(--warning-color)";
-	}
-}
 
 // Meter Foot conversion
 
-function lengthConverter() {
-	// let meter = footNumberInput / 0.3048.toFixed(2)
-	//  let foot = meterNumber * 3.28084 .toFixed(2)
+function lengthConverter(e) {
+    console.log(e)
+    let curParent = e.target.parentElement.parentElement;
+	if (curParent.querySelector(".convert-from").textContent === "Meter"){
+        const feet = curParent.querySelector("input").value / 0.3048
+        curParent.querySelector("p").textContent = `${
+			curParent.querySelector("input").value
+		} meters is ${feet.toFixed(2)} feets`;
+    }else{
+        const meter = curParent.querySelector("input").value / 0.3048
+        curParent.querySelector("p").textContent = `${
+			curParent.querySelector("input").value
+		} feets is ${meter.toFixed(2)} meters`;
+    }
 }
 
 // Speed conversion
@@ -102,7 +102,7 @@ function speedConverter() {
 
 function swapSide(e) {
 	let curParent = e.target.parentElement.parentElement;
-	let inputClear = (curParent.querySelector(".input").value = "");
+	let inputClear = curParent.querySelector(".input").value = "";
 	let result = document.querySelector("p");
 	result.textContent = "Result:";
 	result.style.color = "var(--font-color)";
