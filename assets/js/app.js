@@ -7,55 +7,80 @@ document
 // Temperature converter
 
 // Variables needed to manipulate temperature converter
-const tempConvInput = document.querySelector("#converter-temp");
-const fromTemp = document.querySelector(".conv-from-temp");
-const toTemp = document.querySelector(".conv-to-temp");
-const resultTemp = document.querySelector(".res-temp");
-const convTempBtn = document.querySelector(".btn-temp-conv");
+// const tempConvInput = document.querySelector("#converter-temp");
+// const fromTemp = document.querySelector(".conv-from-temp");
+// const toTemp = document.querySelector(".conv-to-temp");
+// const resultTemp = document.querySelector(".res-temp");
+// const convTempBtn = document.querySelector(".btn-temp-conv");
 
-const tempImg = document.querySelector(".temp-img");
+// const tempImg = document.querySelector(".temp-img");
 
 // Temperature converter functions
 
-function convertTemp() {
-	if (tempConvInput.value !== "") {
-		resultTemp.style.color = "var(--font-color)";
-		if (fromTemp.textContent === "°C") {
-			celToFahr();
+function tempConverter(e) {
+	let curParent = e.target.parentElement.parentElement;
+	if (curParent.querySelector(".convert-from").textContent === "°C") {
+		const fahr = curParent.querySelector("input").value * 1.8 + 32;
+		curParent.querySelector("p").textContent = `${
+			curParent.querySelector("input").value
+		} °C is ${fahr.toFixed(2)}°F`;
+		if (fahr > 77) {
+			curParent.querySelector("img").src = "./assets/img/summer-hot.jpg";
+		} else if (fahr > 59) {
+			curParent.querySelector("img").src = "./assets/img/spring-mid-hot.jpg";
+		} else if (fahr > 46) {
+			curParent.querySelector("img").src = "./assets/img/autun-mid-cold.jpg";
 		} else {
-			fahrToCel();
+			curParent.querySelector("img").src = "./assets/img/winter-cold.jpg";
 		}
 	} else {
-		resultTemp.textContent = "Please type number first!";
-		resultTemp.style.color = "var(--warning-color)";
+		const cel = (curParent.querySelector("input").value - 32) / 1.8;
+		curParent.querySelector("p").textContent = `${
+			curParent.querySelector("input").value
+		} °F is ${cel.toFixed(2)}°C`;
+		if (cel > 25) {
+			curParent.querySelector("img").src = "./assets/img/summer-hot.jpg";
+		} else if (cel > 15) {
+			curParent.querySelector("img").src = "./assets/img/spring-mid-hot.jpg";
+		} else if (cel > 8) {
+			curParent.querySelector("img").src = "./assets/img/autun-mid-cold.jpg";
+		} else {
+			curParent.querySelector("img").src = "./assets/img/winter-cold.jpg";
+		}
 	}
 }
 
-function celToFahr() {
-	const fahr = tempConvInput.value * 1.8 + 32;
-	resultTemp.textContent = `${tempConvInput.value} °C is ${fahr.toFixed(2)}°F`;
-	if (fahr > 77) {
-		tempImg.src = "./assets/img/summer-hot.jpg";
-	} else if (fahr > 59) {
-		tempImg.src = "./assets/img/spring-mid-hot.jpg";
-	} else if (fahr > 46) {
-		tempImg.src = "./assets/img/autun-mid-cold.jpg";
-	} else {
-		tempImg.src = "./assets/img/winter-cold.jpg";
-	}
+//
+
+let btns = document.querySelectorAll("button");
+for (bt of btns) {
+	bt.addEventListener("click", function checkBtn(e) {
+		if (e.target.innerText === "RESET") {
+			reset(e);
+		} else if (e.target.innerText === "CHANGE SIDES") {
+			swapSide(e);
+		} else {
+			convert(e);
+		}
+	});
 }
-function fahrToCel() {
-	const cel = (tempConvInput.value - 32) / 1.8;
-	resultTemp.textContent = `${tempConvInput.value} °F is ${cel.toFixed(2)}°C`;
-	console.log(cel);
-	if (cel > 25) {
-		tempImg.src = "./assets/img/summer-hot.jpg";
-	} else if (cel > 15) {
-		tempImg.src = "./assets/img/spring-mid-hot.jpg";
-	} else if (cel > 8) {
-		tempImg.src = "./assets/img/autun-mid-cold.jpg";
+
+// CONVERTING CHOOSED VALUES
+
+function convert(e) {
+	let curParent = e.target.parentElement.parentElement;
+	if (curParent.querySelector("input").value !== "") {
+		// curParent.querySelector("p").style.color = "var(--font-color)";
+		if (e.target.classList.contains("temp-convert")) {
+			tempConverter(e);
+		} else if (e.target.classList.contains("length-convert")) {
+			lengthConverter(e);
+		} else {
+			speedConverter(e);
+		}
 	} else {
-		tempImg.src = "./assets/img/winter-cold.jpg";
+		curParent.querySelector("p").textContent = "Please type number first!";
+		curParent.querySelector("p").style.color = "var(--warning-color)";
 	}
 }
 
@@ -73,31 +98,11 @@ function speedConverter() {
 	// let km = miles × 1.609344
 }
 
-// Event Listeners
-convTempBtn.addEventListener("click", convertTemp);
-// changeTempBtn.addEventListener("click", swapTempValues);
-
-//
-
-let btns = document.querySelectorAll("button");
-for (bt of btns) {
-	bt.addEventListener("click", function checkBtn(e) {
-		if (e.target.innerText === "RESET") {
-			reset(e);
-		} else if (e.target.innerText === "CHANGE SIDES") {
-			swapSide(e);
-		} else {
-            convert(e)
-		}
-	});
-}
-
 // CHANGING UNIT SIDES FOR CONVERSION
 
 function swapSide(e) {
-	console.log(e);
 	let curParent = e.target.parentElement.parentElement;
-	let inputClear = curParent.querySelector(".input").value = "";
+	let inputClear = (curParent.querySelector(".input").value = "");
 	let result = document.querySelector("p");
 	result.textContent = "Result:";
 	result.style.color = "var(--font-color)";
