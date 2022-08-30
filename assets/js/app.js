@@ -76,7 +76,6 @@ function tempConverter(e) {
 // Meter Foot conversion
 
 function lengthConverter(e) {
-    console.log(e)
     let curParent = e.target.parentElement.parentElement;
 	if (curParent.querySelector(".convert-from").textContent === "Meter"){
         const feet = curParent.querySelector("input").value / 0.3048
@@ -93,9 +92,19 @@ function lengthConverter(e) {
 
 // Speed conversion
 
-function speedConverter() {
-	// let miles = km × 0.621371
-	// let km = miles × 1.609344
+function speedConverter(e) {
+    let curParent = e.target.parentElement.parentElement;
+	if (curParent.querySelector(".convert-from").textContent === "KM/h"){
+        const miles = curParent.querySelector("input").value * 1.609344
+        curParent.querySelector("p").textContent = `${
+			curParent.querySelector("input").value
+		} KM/h is ${miles.toFixed(2)} M/h`;
+    }else{
+        const km = curParent.querySelector("input").value * 0.621371
+        curParent.querySelector("p").textContent = `${
+			curParent.querySelector("input").value
+		} M/h ${km.toFixed(2)} KM/h`;
+    }
 }
 
 // CHANGING UNIT SIDES FOR CONVERSION
