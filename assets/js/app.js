@@ -24,7 +24,7 @@ for (bt of btns) {
 function convert(e) {
 	let curParent = e.target.parentElement.parentElement;
 	if (curParent.querySelector("input").value !== "") {
-		// curParent.querySelector("p").style.color = "var(--font-color)";
+		curParent.querySelector("p").style.color = "var(--font-color)";
 		if (e.target.classList.contains("temp-convert")) {
 			tempConverter(e);
 		} else if (e.target.classList.contains("length-convert")) {
@@ -112,9 +112,8 @@ function speedConverter(e) {
 function swapSide(e) {
 	let curParent = e.target.parentElement.parentElement;
 	let inputClear = curParent.querySelector(".input").value = "";
-	let result = document.querySelector("p");
-	result.textContent = "Result:";
-	result.style.color = "var(--font-color)";
+	curParent.querySelector("p").textContent = "Result:";
+	curParent.querySelector("p").style.color = "var(--font-color)";
 	// Change values of conversion to default
 	let conLeft = curParent.querySelector(".convert-from");
 	let conRight = curParent.querySelector(".convert-to");
@@ -150,9 +149,8 @@ function swapSide(e) {
 function reset(e) {
 	let curParent = e.target.parentElement.parentElement;
 	let inputClear = (curParent.querySelector(".input").value = "");
-	let result = document.querySelector("p");
-	result.textContent = "Result:";
-	result.style.color = "var(--font-color)";
+	curParent.querySelector("p").textContent = "Result:";
+	curParent.querySelector("p").style.color = "var(--font-color)";
 	// Change values of conversion to default
 	let conLeft = curParent.querySelector(".convert-from");
 	let conRight = curParent.querySelector(".convert-to");
