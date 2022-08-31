@@ -13,6 +13,7 @@
 	box-sizing: border-box;
 }
 body {
+	font-family: 'Lato', sans-serif;
 	background-color: var(--bcg-color);
     min-height: 100vh;
     display: flex;
@@ -62,11 +63,19 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+	gap:0.5rem;
     background-color: #fdeacf;
     width: 700px;
     max-width: 95%;
     padding: 3rem 1rem;
-    text-align: center;
+	line-height: 1.4;
+
+}
+.modal ul {
+	padding: 1rem;
+}
+.modal span{
+	font-weight: 600;
 }
 .modal-close{
     color: #001d1c;
