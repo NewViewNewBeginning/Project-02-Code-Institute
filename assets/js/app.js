@@ -9,7 +9,7 @@ document
 const modalOpen = document.querySelector('.modal-open')
 const modalClose = document.querySelector('.modal-close')
 const modal = document.querySelector('.modal-wrapper')
-console.log(modalOpen, modalClose, modal)
+
 modalOpen.addEventListener('click', ()=> {
 	modal.classList.add('show')
 })
