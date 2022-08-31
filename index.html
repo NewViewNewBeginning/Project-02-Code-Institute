@@ -15,6 +15,21 @@
 <body>
     <header>
         <h1>Most popular units converter</h1>
+        <span class="modal-open"><i class="fa-solid fa-person-chalkboard"></i>How to use</span>
+        <div class="modal-wrapper">
+            <div class="modal">
+                <article>
+                    <p>Page contain three converters with buttons. Each buttons react with converter above.</p>
+                    <ul>
+                        <li>Button CONVERT calculate value typed in input</li>
+                        <li>Button CHANGE SIDES swaps converted values which are displayed above input field</li>
+                        <li>Button RESET wipe data and bring values to deafult</li>
+                    </ul>
+                    <p>Conversion results are displayed just under input fields. </p>
+                </article>
+                <i class="fa-solid fa-xmark modal-close"></i>
+            </div>
+        </div>
         <hr>
     </header>
 
@@ -29,7 +44,7 @@
                 <button class="btn change temp-change">Change sides</button>
                 <button class="btn reset reset-temp">Reset</button>
             </div>
-            <img  src="./assets/img/temperature-default.png" alt="appropriate picture for temperature :)">
+            <img src="./assets/img/temperature-default.png" alt="appropriate picture for temperature :)">
         </div>
         <div class="converter-length cell ">
             <label for="convert-tem">Converter <span class="convert-from">Meter</span> for <span
