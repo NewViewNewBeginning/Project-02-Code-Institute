@@ -82,11 +82,13 @@ function lengthConverter(e) {
     let curParent = e.target.parentElement.parentElement;
 	if (curParent.querySelector(".convert-from").textContent === "Meter"){
         const feet = curParent.querySelector("input").value / 0.3048
+        curParent.querySelector("img").src = "./assets/img/meter-length.jpg"
         curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} meters is ${feet.toFixed(2)} feets`;
     }else{
         const meter = curParent.querySelector("input").value / 0.3048
+        curParent.querySelector("img").src = "./assets/img/foot-length.jpg"
         curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} feets is ${meter.toFixed(2)} meters`;
@@ -99,11 +101,13 @@ function speedConverter(e) {
     let curParent = e.target.parentElement.parentElement;
 	if (curParent.querySelector(".convert-from").textContent === "KM/h"){
         const miles = curParent.querySelector("input").value * 1.609344
+        curParent.querySelector("img").src = "./assets/img/km-speed.jpg"
         curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} KM/h is ${miles.toFixed(2)} M/h`;
     }else{
         const km = curParent.querySelector("input").value * 0.621371
+        curParent.querySelector("img").src = "./assets/img/mile-speed.jpg"
         curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} M/h ${km.toFixed(2)} KM/h`;
@@ -160,11 +164,14 @@ function reset(e) {
 	if (e.target.classList.contains("reset-temp")) {
 		conLeft.textContent = "°C";
 		conRight.textContent = "°F";
+        curParent.querySelector("img").src = "./assets/img/temperature-default.png"
 	} else if (e.target.classList.contains("reset-length")) {
 		conLeft.textContent = "Meter";
 		conRight.textContent = "Feet";
+        curParent.querySelector("img").src = "./assets/img/lenght-default.webp"
 	} else {
 		conLeft.textContent = "KM/h";
 		conRight.textContent = "M/h";
+        curParent.querySelector("img").src = "./assets/img/speed-default.jpg"
 	}
 }
