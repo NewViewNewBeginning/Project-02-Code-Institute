@@ -148,9 +148,10 @@ hr {
 	outline: none;
 	box-shadow: 0 0 0 0.3rem var(--font-color);
 }
-img{
+.cell img{
     width: 60%;
-	height: 100%;
+	min-height: 200px;
+	max-height: 200px;
     border-radius: 0.5rem;
 }
 footer{
