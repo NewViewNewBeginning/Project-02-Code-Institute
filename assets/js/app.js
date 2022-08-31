@@ -4,7 +4,7 @@ document
 	.querySelector(".date")
 	.appendChild(document.createTextNode(new Date().getFullYear()));
 
-//
+// Add event listener to each button with correct function
 
 let btns = document.querySelectorAll("button");
 for (bt of btns) {
@@ -27,10 +27,13 @@ function convert(e) {
 		curParent.querySelector("p").style.color = "var(--font-color)";
 		if (e.target.classList.contains("temp-convert")) {
 			tempConverter(e);
+            curParent.querySelector("input").value = ""
 		} else if (e.target.classList.contains("length-convert")) {
 			lengthConverter(e);
+            curParent.querySelector("input").value = ""
 		} else {
 			speedConverter(e);
+            curParent.querySelector("input").value = ""
 		}
 	} else {
 		curParent.querySelector("p").textContent = "Please type number first!";
