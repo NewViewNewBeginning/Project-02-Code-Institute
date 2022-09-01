@@ -1,13 +1,15 @@
 # Project-02-Code-Institute
 
-modal idea https://www.youtube.com/watch?v=XH5OW46yO8I
+## [View life website in github pages](https://newviewnewbeginning.github.io/Project-02-Code-Institute/?fbclid=IwAR08GFwaCjcxqDqrs54Y8vWdcBJFv4CljcEI5Zlqa5LEJ3RPSNeGcV05ELM)
+
+
 # Values converter
 
 In this section, you will include one or two paragraphs providing an overview of your project. Essentially, this part is your sales pitch. At this stage, you should have a name for your project so use it! Don’t introduce the project as a Portfolio project for the diploma. In this section, describe what the project hopes to accomplish, who it is intended to target and how it will be useful to the target audience. 
 
 For example, Love Maths is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also maths. Love Maths is a fully responsive JavaScript maths game that will allow users to add, subtract, multiply and divide numbers. 
 
-![Responsice Mockup](media/love_maths_mockup.png)
+![Responsice Mockup](!(https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/amIresponsive.png))
 
 ## Features 
 
@@ -15,49 +17,57 @@ In this section, you should go over the different parts of your project, and des
 
 ### Existing Features
 
-- __The Love Maths Logo and Heading__
+- __Converter Heading__
 
-  - Featured at the top of the page, the Love Maths logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game.
+  - Featured at the top of the page, the Units Converter and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name and How To Use text which after click open modal window with instructions how to use converters.
 
-![Logo](media/love_maths_logo.png)
+![Header](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/header-scr.png)
 
-- __The Game Area__
+![How to Use](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/Modal-scr.png)
 
-  - This section will allow the user to play the maths game. The user will be able to easily see icons for addition,  subtraction, multiplication, and division games.
-  - The user will be able to select the type of maths game they will be playing by clicking on the different icons. 
+- __Converter__
 
-![Game](media/love_maths_icons.png)
+  - Each converter is showing what values are converted above input area.
 
-- __The Question section__
+![Converters](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/converters-scr.png)
 
-  - The question section is where the user will be able to see the elementary arithmetic question to answer as part of the game. The user will be able answer the questions in the answer box provide
-  - The user will be able to submit their answer and a pop-up will make it known to the user if they answered correctly. 
+- __Wrong or empty value__
 
-![Question](media/love_maths_question.png)
+  - Wrong or empty value will show error message under input field 
 
-- __The Score Area__
+![Error](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/converter-alert-scr.png)
 
-  - This section will allow the user to see exactly how many correct and incorrect answers they have provided. 
+- __Results area__
 
-![score](media/love_maths_answer.png)
+  - When you type number value into input and convert it result will show just junder input field and picture will also change depand of result or type of value converted. 
 
-For some/all of your features, you may choose to reference the specific project files that implement them.
+![Result](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/converter-other-img-scr.png)
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+![Result](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/miles-img-scr.png)
+
 
 ### Features Left to Implement
 
-- Another feature idea
+- Another coverters for other values.
 
 ## Testing 
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+## Functionality testing
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+I used Mozilla web developer tools and Chrome developer tools throughout the project for testing and solving problems with responsiveness and style issues.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+## Compatibility testing
+
+Site was tested across multiple virtual mobile devices and browsers. I checked all supported devices in both Mozilla web developer tolls and Chrome developer tools.
+
+I tested on hardware devices such as: 14' screen HP laptop, 17' screen Asus laptop, 27' hp monitor, Samsung s20fe, Samsung s7edge and Samsung Note 10.
+
+## Performance testing
+
+I run [Lighthouse](https://developers.google.com/web/tools/lighthouse/) tool to check performance of the website .
+
+![Lighthouse ](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/lighthouse-scr.png)
 
 
 ### Validator Testing 
@@ -76,7 +86,7 @@ If this section grows too long, you may want to split it off into a separate fil
 
 ### Unfixed Bugs
 
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. 
+As far I tested I found no bugs.
 
 ## Deployment
 
@@ -98,8 +108,7 @@ You can break the credits section up into Content and Media, depending on what y
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+- Instructions on how to implement modal [Modal](https://www.youtube.com/watch?v=XH5OW46yO8I)
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
 ### Media
