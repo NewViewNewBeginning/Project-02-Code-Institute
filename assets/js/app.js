@@ -20,7 +20,7 @@ modalClose.addEventListener('click', ()=> {
 // Add event listener to each button with correct function
 
 let btns = document.querySelectorAll("button");
-for (bt of btns) {
+for (let bt of btns) {
 	bt.addEventListener("click", function checkBtn(e) {
 		if (e.target.innerText === "RESET") {
 			reset(e);
