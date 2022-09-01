@@ -150,8 +150,8 @@ hr {
 }
 .cell img{
     width: 60%;
-	min-height: 200px;
-	max-height: 200px;
+	min-height: 170px;
+	max-height: 170px;
     border-radius: 0.5rem;
 }
 footer{
