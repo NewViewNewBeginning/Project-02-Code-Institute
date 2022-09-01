@@ -4,23 +4,23 @@ document
 	.querySelector(".date")
 	.appendChild(document.createTextNode(new Date().getFullYear()));
 
-// Modal window ---how to use--- 
+// Modal window ---how to use---
 
-const modalOpen = document.querySelector('.modal-open')
-const modalClose = document.querySelector('.modal-close')
-const modal = document.querySelector('.modal-wrapper')
+const modalOpen = document.querySelector(".modal-open");
+const modalClose = document.querySelector(".modal-close");
+const modal = document.querySelector(".modal-wrapper");
 
-modalOpen.addEventListener('click', ()=> {
-	modal.classList.add('show')
-})
-modalClose.addEventListener('click', ()=> {
-	modal.classList.remove('show')
-})
+modalOpen.addEventListener("click", () => {
+	modal.classList.add("show");
+});
+modalClose.addEventListener("click", () => {
+	modal.classList.remove("show");
+});
 
 // Add event listener to each button with correct function
 
 let btns = document.querySelectorAll("button");
-for (bt of btns) {
+for (let bt of btns) {
 	bt.addEventListener("click", function checkBtn(e) {
 		if (e.target.innerText === "RESET") {
 			reset(e);
@@ -40,13 +40,13 @@ function convert(e) {
 		curParent.querySelector("p").style.color = "var(--font-color)";
 		if (e.target.classList.contains("temp-convert")) {
 			tempConverter(e);
-            curParent.querySelector("input").value = ""
+			curParent.querySelector("input").value = "";
 		} else if (e.target.classList.contains("length-convert")) {
 			lengthConverter(e);
-            curParent.querySelector("input").value = ""
+			curParent.querySelector("input").value = "";
 		} else {
 			speedConverter(e);
-            curParent.querySelector("input").value = ""
+			curParent.querySelector("input").value = "";
 		}
 	} else {
 		curParent.querySelector("p").textContent = "Please type number first!";
@@ -88,50 +88,49 @@ function tempConverter(e) {
 	}
 }
 
-
 // Meter Foot conversion
 
 function lengthConverter(e) {
-    let curParent = e.target.parentElement.parentElement;
-	if (curParent.querySelector(".convert-from").textContent === "Meter"){
-        const feet = curParent.querySelector("input").value / 0.3048
-        curParent.querySelector("img").src = "./assets/img/meter-length.jpg"
-        curParent.querySelector("p").textContent = `${
+	let curParent = e.target.parentElement.parentElement;
+	if (curParent.querySelector(".convert-from").textContent === "Meter") {
+		const feet = curParent.querySelector("input").value / 0.3048;
+		curParent.querySelector("img").src = "./assets/img/meter-length.jpg";
+		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} meters is ${feet.toFixed(2)} feets`;
-    }else{
-        const meter = curParent.querySelector("input").value / 0.3048
-        curParent.querySelector("img").src = "./assets/img/foot-length.jpg"
-        curParent.querySelector("p").textContent = `${
+	} else {
+		const meter = curParent.querySelector("input").value / 0.3048;
+		curParent.querySelector("img").src = "./assets/img/foot-length.jpg";
+		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} feets is ${meter.toFixed(2)} meters`;
-    }
+	}
 }
 
 // Speed conversion
 
 function speedConverter(e) {
-    let curParent = e.target.parentElement.parentElement;
-	if (curParent.querySelector(".convert-from").textContent === "KM/h"){
-        const miles = curParent.querySelector("input").value * 1.609344
-        curParent.querySelector("img").src = "./assets/img/km-speed.jpg"
-        curParent.querySelector("p").textContent = `${
+	let curParent = e.target.parentElement.parentElement;
+	if (curParent.querySelector(".convert-from").textContent === "KM/h") {
+		const miles = curParent.querySelector("input").value * 1.609344;
+		curParent.querySelector("img").src = "./assets/img/km-speed.jpg";
+		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} KM/h is ${miles.toFixed(2)} M/h`;
-    }else{
-        const km = curParent.querySelector("input").value * 0.621371
-        curParent.querySelector("img").src = "./assets/img/mile-speed.jpg"
-        curParent.querySelector("p").textContent = `${
+	} else {
+		const km = curParent.querySelector("input").value * 0.621371;
+		curParent.querySelector("img").src = "./assets/img/mile-speed.jpg";
+		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} M/h ${km.toFixed(2)} KM/h`;
-    }
+	}
 }
 
 // CHANGING UNIT SIDES FOR CONVERSION
 
 function swapSide(e) {
 	let curParent = e.target.parentElement.parentElement;
-	let inputClear = curParent.querySelector(".input").value = "";
+	curParent.querySelector(".input").value = "";
 	curParent.querySelector("p").textContent = "Result:";
 	curParent.querySelector("p").style.color = "var(--font-color)";
 	// Change values of conversion to default
@@ -168,7 +167,7 @@ function swapSide(e) {
 
 function reset(e) {
 	let curParent = e.target.parentElement.parentElement;
-	let inputClear = (curParent.querySelector(".input").value = "");
+	curParent.querySelector(".input").value = "";
 	curParent.querySelector("p").textContent = "Result:";
 	curParent.querySelector("p").style.color = "var(--font-color)";
 	// Change values of conversion to default
@@ -177,14 +176,14 @@ function reset(e) {
 	if (e.target.classList.contains("reset-temp")) {
 		conLeft.textContent = "°C";
 		conRight.textContent = "°F";
-        curParent.querySelector("img").src = "./assets/img/temperature-default.png"
+		curParent.querySelector("img").src = "./assets/img/temperature-default.png";
 	} else if (e.target.classList.contains("reset-length")) {
 		conLeft.textContent = "Meter";
 		conRight.textContent = "Feet";
-        curParent.querySelector("img").src = "./assets/img/lenght-default.webp"
+		curParent.querySelector("img").src = "./assets/img/lenght-default.webp";
 	} else {
 		conLeft.textContent = "KM/h";
 		conRight.textContent = "M/h";
-        curParent.querySelector("img").src = "./assets/img/speed-default.jpg"
+		curParent.querySelector("img").src = "./assets/img/speed-default.jpg";
 	}
 }
