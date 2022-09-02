@@ -5,15 +5,21 @@
 
 # Values converter
 
-In this section, you will include one or two paragraphs providing an overview of your project. Essentially, this part is your sales pitch. At this stage, you should have a name for your project so use it! Don’t introduce the project as a Portfolio project for the diploma. In this section, describe what the project hopes to accomplish, who it is intended to target and how it will be useful to the target audience. 
+3 types converters with images under each describing covertion values.
+ 
+Temperature    Celsius <--> Fahrenheit  
+ 
+Length      Meter <--> Feet
 
-For example, Love Maths is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also maths. Love Maths is a fully responsive JavaScript maths game that will allow users to add, subtract, multiply and divide numbers. 
+Speed     Kilometers/h <--> Miles/h
+
+All functionality is written in pure JavaScript and it's fully responsive to all kinds of devices. 
 
 ![Responsice Mockup](!(https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/amIresponsive.png))
 
 ## Features 
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+This site can be used to calculate popular values and in future can be filled with more conversion units to gain more users and be more advanced with possibilities of conversion. 
 
 ### Existing Features
 
@@ -39,7 +45,7 @@ In this section, you should go over the different parts of your project, and des
 
 - __Results area__
 
-  - When you type number value into input and convert it result will show just junder input field and picture will also change depand of result or type of value converted. 
+  - When you type number value into input and convert it result will show just under input field and picture will also change depand of result or type of value converted. 
 
 ![Result](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/converter-other-img-scr.png)
 
@@ -73,65 +79,110 @@ I run [Lighthouse](https://developers.google.com/web/tools/lighthouse/) tool to 
 ### Validator Testing 
 
 - HTML
-    - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-maths%2F)
+    - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fnewviewnewbeginning.github.io%2FProject-02-Code-Institute%2F%3Ffbclid%3DIwAR08GFwaCjcxqDqrs54Y8vWdcBJFv4CljcEI5Zlqa5LEJ3RPSNeGcV05ELM)
 - CSS
-    - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-maths%252F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fnewviewnewbeginning.github.io%2FProject-02-Code-Institute%2F%3Ffbclid%3DIwAR08GFwaCjcxqDqrs54Y8vWdcBJFv4CljcEI5Zlqa5LEJ3RPSNeGcV05ELM&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=pl-PL)
 - JavaScript
     - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
       - The following metrics were returned: 
-      - There are 11 functions in this file.
-      - Function with the largest signature takes 2 arguments, while the median is 0.
-      - Largest function has 10 statements in it, while the median is 3.
-      - The most complex function has a cyclomatic complexity value of 4 while the median is 2.
+      - There are 10 functions in this file.
+      - Function with the largest signature takes 1 arguments, while the median is 1.
+      - Largest function has 22 statements in it, while the median is 8.
+      - The most complex function has a cyclomatic complexity value of 8 while the median is 2.5.
 
 ### Unfixed Bugs
 
-As far I tested I found no bugs.
+There is 1 warning which not causing any problems or bugs.  
+"One warning
+41	Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (reset, swapSide, convert)"
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub) 
+The project was deployed on GitHub Pages. I used VS Code as a development environment where I commited all changes to git version control system.
+I used push command in VS Code to save changes into GitHub.
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the GitHub repository, navigate to the Settings tab 
-  - From the source section drop-down menu, select the Master Branch
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+To deploy a project I had to:
 
-The live link can be found here - https://code-institute-org.github.io/love-maths/
+- Log in to GitHub and click on repository to deploy ([Project-02](https://github.com/NewViewNewBeginning/Project-02-Code-Institute))
+- select `Settings` and find GitHub Pages section at the very bottom of the page
+- from source select `none` and then `Milestone-Projects` branch.
+- click `save` and page was deployed after auto-refresh.
+  > Your site is published at https://github.com/NewViewNewBeginning/Project-02-Code-Institute/
+
+To run localy:
+
+- Log in to GitHub and click on repository to download ([Project-02](https://github.com/NewViewNewBeginning/Project-02-Code-Institute))
+- select `Code` and click Download the ZIP file.
+- after download you can extract the file and use it in your local environment
+
+Alternatively you can [Clone](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+or [Fork](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+this repository ([Project-02](https://github.com/NewViewNewBeginning/Project-02-Code-Institute)) into your github account.
 
 
 ## Credits 
 
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
+- Ideas and knowledge library:
 
-You can break the credits section up into Content and Media, depending on what you have included in your project. 
+  - [w3schools.com](https://www.w3schools.com)
+
+  - [css-tricks.com](https://css-tricks.com/)
+
+  - [developer.mozilla.org/](https://developer.mozilla.org/)
 
 ### Content 
 
-- Instructions on how to implement modal [Modal](https://www.youtube.com/watch?v=XH5OW46yO8I)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- How to implement modal [Modal](https://www.youtube.com/watch?v=XH5OW46yO8I)
+- The icon in the header is taken from [Font Awesome](https://fontawesome.com/)
+- 
 
 ### Media
 
-- The photos used on the home and sign up page are from This Open Source site
-- The images used for the gallery page were taken from this other open source site
+- The photos used under converters are from [Pixabay](https://pixabay.com/)
+
+- Fonts [Google fonts - Lato](https://fonts.google.com/)
+
+- Colors used 
+
+![Colors](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/colors-scr.png)
 
 
-Congratulations on completing your Readme, you have made another big stride in the direction of being a developer! 
 
-## Other General Project Advice
 
-Below you will find a couple of extra tips that may be helpful when completing your project. Remember that each of these projects will become part of your final portfolio so it’s important to allow enough time to showcase your best work! 
+# Technologies used
 
-- One of the most basic elements of keeping a healthy commit history is with the commit message. When getting started with your project, read through [this article](https://chris.beams.io/posts/git-commit/) by Chris Beams on How to Write  a Git Commit Message 
-  - Make sure to keep the messages in the imperative mood 
+### HTML5
 
-- When naming the files in your project directory, make sure to consider meaningful naming of files, point to specific names and sections of content.
-  - For example, instead of naming an image used ‘image1.png’ consider naming it ‘landing_page_img.png’. This will ensure that there are clear file paths kept. 
+- As a structure language.
 
-- Do some extra research on good and bad coding practices, there are a handful of useful articles to read, consider reviewing the following list when getting started:
-  - [Writing Your Best Code](https://learn.shayhowe.com/html-css/writing-your-best-code/)
-  - [HTML & CSS Coding Best Practices](https://medium.com/@inceptiondj.info/html-css-coding-best-practice-fadb9870a00f)
-  - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#General)
+### CSS
 
-Getting started with your Portfolio Projects can be daunting, planning your project can make it a lot easier to tackle, take small steps to reach the final outcome and enjoy the process! 
+- As a style language.
+
+### JavaScript
+
+- As a script to give functionality for burger menu.
+
+### Font Awesome
+
+- As an icon library for a social links.
+
+### Google fonts
+
+- As a font resource.
+
+### GitHub
+
+- As a software hosting platform to keep project in a remote location.
+
+### Git
+
+- As a version-control system tracking.
+
+### VScode
+
+- As a development hosting platform.
+
+
+
+
