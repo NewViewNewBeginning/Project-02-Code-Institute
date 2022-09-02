@@ -161,7 +161,7 @@ this repository ([Project-02](https://github.com/NewViewNewBeginning/Project-02-
 
 ### JavaScript
 
-- As a script to give functionality for burger menu.
+- As a script to give functionality.
 
 ### Font Awesome
 
