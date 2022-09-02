@@ -1,4 +1,4 @@
-[# Project-02-Code-Institute
+# Project-02-Code-Institute
 
 ## [View life website in github pages](https://newviewnewbeginning.github.io/Project-02-Code-Institute/?fbclid=IwAR08GFwaCjcxqDqrs54Y8vWdcBJFv4CljcEI5Zlqa5LEJ3RPSNeGcV05ELM)
 
