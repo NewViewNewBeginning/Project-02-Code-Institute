@@ -184,5 +184,3 @@ this repository ([Project-02](https://github.com/NewViewNewBeginning/Project-02-
 - As a development hosting platform.
 
 
-
-
