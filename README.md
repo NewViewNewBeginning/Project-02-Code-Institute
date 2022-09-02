@@ -1,4 +1,4 @@
-# Project-02-Code-Institute
+[# Project-02-Code-Institute
 
 ## [View life website in github pages](https://newviewnewbeginning.github.io/Project-02-Code-Institute/?fbclid=IwAR08GFwaCjcxqDqrs54Y8vWdcBJFv4CljcEI5Zlqa5LEJ3RPSNeGcV05ELM)
 
@@ -135,3 +135,4 @@ Below you will find a couple of extra tips that may be helpful when completing y
   - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#General)
 
 Getting started with your Portfolio Projects can be daunting, planning your project can make it a lot easier to tackle, take small steps to reach the final outcome and enjoy the process! 
+](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/colors-scr.png)
