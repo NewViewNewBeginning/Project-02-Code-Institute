@@ -98,13 +98,13 @@ function lengthConverter(e) {
 function speedConverter(e) {
 	let curParent = e.target.parentElement.parentElement;
 	if (curParent.querySelector(".convert-from").textContent === "KM/h") {
-		const miles = curParent.querySelector("input").value * 1.609344;
+		const miles = curParent.querySelector("input").value * 0.621371;
 		curParent.querySelector("img").src = "./assets/img/km-speed.jpg";
 		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} KM/h is ${miles.toFixed(2)} M/h`;
 	} else {
-		const km = curParent.querySelector("input").value * 0.621371;
+		const km = curParent.querySelector("input").value * 1.609344;
 		curParent.querySelector("img").src = "./assets/img/mile-speed.jpg";
 		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
