@@ -17,19 +17,12 @@ modalClose.addEventListener("click", () => {
 	modal.classList.remove("show");
 });
 
-// Add event listener to each button with correct function
+// Add event listener to CONVERT buttons
 
-let btns = document.querySelectorAll("button");
-for (let bt of btns) {
-	bt.addEventListener("click", function (e) {
-		if (this.innerText === "RESET") {
-			console.log(this, e);
-			reset(e);
-			// } else if (this.innerText === "CHANGE SIDES") {
-			// 	changeSide(e);
-		} else {
-			convert(e);
-		}
+let convertBtns = document.querySelectorAll(".convert");
+for (let btn of convertBtns) {
+	btn.addEventListener("click", function (e) {
+		convert(e);
 	});
 }
 
@@ -133,16 +126,28 @@ let converterLabels = {
 	"temp-conv": {
 		left: "°C",
 		right: "°F",
+		defaultLeft: "°C",
+		defaultRight: "°F",
+		defaultImg: "./assets/img/temperature-default.png",
 	},
 	"length-conv": {
 		left: "Meter",
 		right: "Feet",
+		defaultLeft: "Meter",
+		defaultRight: "Feet",
+		defaultImg: "./assets/img/lenght-default.webp",
 	},
 	"speed-conv": {
 		left: "KM/h",
 		right: "M/h",
+		defaultLeft: "KM/h",
+		defaultRight: "M/h",
+		defaultImg: "./assets/img/speed-default.jpg",
 	},
 };
+
+// Add event listener to CHANGE SIDE buttons
+
 let changeBtns = document.querySelectorAll(".change");
 for (let changeBtn of changeBtns) {
 	changeBtn.addEventListener("click", changeSide);
@@ -160,40 +165,18 @@ function changeSide(e) {
 	let conRight = curParent.querySelector(".convert-to");
 	conLeft.textContent = converterLabels[parentId].left;
 	conRight.textContent = converterLabels[parentId].right;
-	
+
 	// reset values and bring default syle
 	curParent.querySelector(".input").value = "";
 	curParent.querySelector("p").textContent = "Result:";
 	curParent.querySelector("p").style.color = "var(--font-color)";
-
-	// if (e.target.classList.contains("temp-change")) {
-	// 	if (conLeft.textContent === "°C") {
-	// 		conLeft.textContent = "°F";
-	// 		conRight.textContent = "°C";
-	// 	} else {
-	// 		conLeft.textContent = "°C";
-	// 		conRight.textContent = "°F";
-	// 	}
-	// } else if (e.target.classList.contains("length-change")) {
-	// 	if (conLeft.textContent === "Meter") {
-	// 		conLeft.textContent = "Feet";
-	// 		conRight.textContent = "Meter";
-	// 	} else {
-	// 		conLeft.textContent = "Meter";
-	// 		conRight.textContent = "Feet";
-	// 	}
-	// } else {
-	// 	if (conLeft.textContent === "KM/h") {
-	// 		conLeft.textContent = "M/h";
-	// 		conRight.textContent = "KM/h";
-	// 	} else {
-	// 		conLeft.textContent = "KM/h";
-	// 		conRight.textContent = "M/h";
-	// 	}
-	// }
 }
 
 // RESETING ALL VALUES OF CURRENT CONVERTER TO DEFAULT
+let resetBtns = document.querySelectorAll(".reset");
+for (let resetBtn of resetBtns) {
+	resetBtn.addEventListener("click", reset);
+}
 
 function reset(e) {
 	let curParent = e.target.parentElement.parentElement;
@@ -201,19 +184,12 @@ function reset(e) {
 	curParent.querySelector("p").textContent = "Result:";
 	curParent.querySelector("p").style.color = "var(--font-color)";
 	// Change values of conversion to default
+	let parentId = e.target.parentElement.parentElement.id;
 	let conLeft = curParent.querySelector(".convert-from");
 	let conRight = curParent.querySelector(".convert-to");
-	if (e.target.classList.contains("reset-temp")) {
-		conLeft.textContent = "°C";
-		conRight.textContent = "°F";
-		curParent.querySelector("img").src = "./assets/img/temperature-default.png";
-	} else if (e.target.classList.contains("reset-length")) {
-		conLeft.textContent = "Meter";
-		conRight.textContent = "Feet";
-		curParent.querySelector("img").src = "./assets/img/lenght-default.webp";
-	} else {
-		conLeft.textContent = "KM/h";
-		conRight.textContent = "M/h";
-		curParent.querySelector("img").src = "./assets/img/speed-default.jpg";
+
+	if (conLeft.textContent !== converterLabels[parentId].defaultLeft) {
+		conLeft.textContent = converterLabels[parentId].defaultLeft;
+		conRight.textContent = converterLabels[parentId].defaultRight;
 	}
 }
