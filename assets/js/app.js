@@ -47,38 +47,32 @@ function convert(e) {
 		curParent.querySelector("p").style.color = "var(--warning-color)";
 	}
 }
+
 // Temperature converter
 
 function tempConverter(e) {
 	let curParent = e.target.parentElement.parentElement;
+	let cel
+	let fahr
 	if (curParent.querySelector(".convert-from").textContent === "°C") {
-		const fahr = curParent.querySelector("input").value * 1.8 + 32;
+		fahr = curParent.querySelector("input").value * 1.8 + 32;
 		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} °C is ${fahr.toFixed(2)} °F`;
-		if (fahr > 77) {
-			curParent.querySelector("img").src = "./assets/img/summer-hot.jpg";
-		} else if (fahr > 59) {
-			curParent.querySelector("img").src = "./assets/img/spring-mid-hot.jpg";
-		} else if (fahr > 46) {
-			curParent.querySelector("img").src = "./assets/img/autun-mid-cold.jpg";
-		} else {
-			curParent.querySelector("img").src = "./assets/img/winter-cold.jpg";
-		}
 	} else {
-		const cel = (curParent.querySelector("input").value - 32) / 1.8;
+		cel = (curParent.querySelector("input").value - 32) / 1.8;
 		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} °F is ${cel.toFixed(2)}°C`;
-		if (cel > 25) {
-			curParent.querySelector("img").src = "./assets/img/summer-hot.jpg";
-		} else if (cel > 15) {
-			curParent.querySelector("img").src = "./assets/img/spring-mid-hot.jpg";
-		} else if (cel > 8) {
-			curParent.querySelector("img").src = "./assets/img/autun-mid-cold.jpg";
-		} else {
-			curParent.querySelector("img").src = "./assets/img/winter-cold.jpg";
-		}
+	}
+	if (cel > 25 || fahr > 77) {
+		curParent.querySelector("img").src = "./assets/img/summer-hot.jpg";
+	} else if (cel > 15 || fahr > 59) {
+		curParent.querySelector("img").src = "./assets/img/spring-mid-hot.jpg";
+	} else if (cel > 8 || fahr > 46) {
+		curParent.querySelector("img").src = "./assets/img/autun-mid-cold.jpg";
+	} else {
+		curParent.querySelector("img").src = "./assets/img/winter-cold.jpg";
 	}
 }
 
@@ -122,6 +116,7 @@ function speedConverter(e) {
 
 // CHANGING UNIT SIDES FOR CONVERSION
 //Object storing coverter units
+
 let converterLabels = {
 	"temp-conv": {
 		left: "°C",
@@ -187,6 +182,7 @@ function reset(e) {
 	let parentId = e.target.parentElement.parentElement.id;
 	let conLeft = curParent.querySelector(".convert-from");
 	let conRight = curParent.querySelector(".convert-to");
+	curParent.querySelector("img").src = converterLabels[parentId].defaultImg
 
 	if (conLeft.textContent !== converterLabels[parentId].defaultLeft) {
 		conLeft.textContent = converterLabels[parentId].defaultLeft;
