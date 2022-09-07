@@ -35,9 +35,9 @@
     </header>
 
     <div class="wrapper">
-        <div class="converter-temp cell">
-            <label for="converter-tem">Converter <span class="convert-from">°C</span> for <span
-                    class="convert-to">°F</span></label>
+        <div class="converter-temp cell" id="temp-conv">
+            <label for="converter-tem">Converter <span class="convert-from" data-value="°C">°C</span> for <span
+                    class="convert-to" data-value="°F">°F</span></label>
             <input type="number" class="input" id="converter-tem" placeholder="Type number...">
             <p class="result res-temp">Result:</p>
             <div class="converter-btn">
@@ -47,7 +47,7 @@
             </div>
             <img src="./assets/img/temperature-default.png" alt="couple thermometers with different temperature">
         </div>
-        <div class="converter-length cell ">
+        <div class="converter-length cell " id="length-conv">
             <label for="converter-length">Converter <span class="convert-from">Meter</span> for <span
                     class="convert-to">Feet</span></label>
             <input type="number" class="input" id="converter-length" placeholder="Type number...">
@@ -59,7 +59,7 @@
             </div>
             <img src="./assets/img/lenght-default.webp" alt="measure tape with meters and feet scale">
         </div>
-        <div class="converter-speed cell">
+        <div class="converter-speed cell" id="speed-conv">
             <label for="converter-speed">Converter <span class="convert-from">KM/h</span> for <span
                     class="convert-to">M/h</span></label>
             <input type="number" class="input" id="converter-speed" placeholder="Type number...">
