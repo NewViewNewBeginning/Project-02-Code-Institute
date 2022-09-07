@@ -21,9 +21,7 @@ modalClose.addEventListener("click", () => {
 
 let convertBtns = document.querySelectorAll(".convert");
 for (let btn of convertBtns) {
-	btn.addEventListener("click", function (e) {
-		convert(e);
-	});
+	btn.addEventListener("click", convert);
 }
 
 // CONVERTING CHOOSED VALUES
@@ -52,8 +50,8 @@ function convert(e) {
 
 function tempConverter(e) {
 	let curParent = e.target.parentElement.parentElement;
-	let cel
-	let fahr
+	let cel;
+	let fahr;
 	if (curParent.querySelector(".convert-from").textContent === "°C") {
 		fahr = curParent.querySelector("input").value * 1.8 + 32;
 		curParent.querySelector("p").textContent = `${
@@ -167,11 +165,14 @@ function changeSide(e) {
 	curParent.querySelector("p").style.color = "var(--font-color)";
 }
 
-// RESETING ALL VALUES OF CURRENT CONVERTER TO DEFAULT
+// Add event listener to RESET  buttons
+
 let resetBtns = document.querySelectorAll(".reset");
 for (let resetBtn of resetBtns) {
 	resetBtn.addEventListener("click", reset);
 }
+
+// RESETING ALL VALUES IN CURRENT CONVERTER TO DEFAULT
 
 function reset(e) {
 	let curParent = e.target.parentElement.parentElement;
@@ -182,7 +183,7 @@ function reset(e) {
 	let parentId = e.target.parentElement.parentElement.id;
 	let conLeft = curParent.querySelector(".convert-from");
 	let conRight = curParent.querySelector(".convert-to");
-	curParent.querySelector("img").src = converterLabels[parentId].defaultImg
+	curParent.querySelector("img").src = converterLabels[parentId].defaultImg;
 
 	if (conLeft.textContent !== converterLabels[parentId].defaultLeft) {
 		conLeft.textContent = converterLabels[parentId].defaultLeft;
