@@ -15,7 +15,7 @@ Speed     Kilometers/h <--> Miles/h
 
 All functionality is written in pure JavaScript and it's fully responsive to all kinds of devices. 
 
-![Responsice Mockup](!(https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/amIresponsive.png))
+![Responsice Mockup](https://github.com/NewViewNewBeginning/Project-02-Code-Institute/blob/main/assets/readme-img/amIresponsive.png)
 
 ## Features 
 
@@ -161,7 +161,7 @@ this repository ([Project-02](https://github.com/NewViewNewBeginning/Project-02-
 
 ### JavaScript
 
-- As a script to give functionality for burger menu.
+- As a script to give functionality.
 
 ### Font Awesome
 
