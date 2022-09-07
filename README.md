@@ -7,11 +7,11 @@
 
 3 types converters with images under each describing covertion values.
  
-Temperature    Celsius <--> Fahrenheit  
+  -Temperature    Celsius <--> Fahrenheit  
  
-Length      Meter <--> Feet
+  -Length      Meter <--> Feet
 
-Speed     Kilometers/h <--> Miles/h
+  -Speed     Kilometers/h <--> Miles/h
 
 All functionality is written in pure JavaScript and it's fully responsive to all kinds of devices. 
 
@@ -85,16 +85,15 @@ I run [Lighthouse](https://developers.google.com/web/tools/lighthouse/) tool to 
 - JavaScript
     - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
       - The following metrics were returned: 
-      - There are 10 functions in this file.
+      - There are 9 functions in this file.
       - Function with the largest signature takes 1 arguments, while the median is 1.
-      - Largest function has 22 statements in it, while the median is 8.
+      - Largest function has 13 statements in it, while the median is 8.
       - The most complex function has a cyclomatic complexity value of 8 while the median is 2.5.
 
 ### Unfixed Bugs
 
-There is 1 warning which not causing any problems or bugs.  
-"One warning
-41	Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (reset, swapSide, convert)"
+None after testing.
+
 
 ## Deployment
 
@@ -121,6 +120,8 @@ this repository ([Project-02](https://github.com/NewViewNewBeginning/Project-02-
 
 
 ## Credits 
+
+Big thanks to my mentor André Aquilina for his knowlage and support
 
 - Ideas and knowledge library:
 
