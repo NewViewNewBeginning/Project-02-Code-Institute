@@ -85,7 +85,7 @@ function lengthConverter(e) {
 			curParent.querySelector("input").value
 		} meters is ${feet.toFixed(2)} feets`;
 	} else {
-		const meter = curParent.querySelector("input").value / 0.3048;
+		const meter = curParent.querySelector("input").value * 0.3048;
 		curParent.querySelector("img").src = "./assets/img/foot-length.jpg";
 		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
