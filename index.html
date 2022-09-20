@@ -16,7 +16,7 @@
     <header>
         <h1>Units converter</h1>
         <span class="modal-open"><i class="fa-solid fa-person-chalkboard"></i>How to use</span>
-        <div class="modal-wrapper">
+        <main class="modal-wrapper">
             <div class="modal">
                 <p>Page contain three converters with buttons. Each buttons react with converter above.<br>
                 Conversion results are displayed just under input fields. <br>
@@ -30,13 +30,13 @@
                 </ul>
                 <i class="fa-solid fa-xmark modal-close"></i>
             </div>
-        </div>
+        </main>
         <hr>
     </header>
 
-    <div class="wrapper">
+    <main class="converters">
         <div class="converter-temp cell" id="temp-conv">
-            <label for="converter-tem">Converter <span class="convert-from" data-value="°C">°C</span> for <span
+            <label for="converter-tem">Converter <span class="convert-from" data-value="°C">°C</span> to <span
                     class="convert-to" data-value="°F">°F</span></label>
             <input type="number" class="input" id="converter-tem" placeholder="Type number...">
             <p class="result res-temp">Result:</p>
@@ -48,7 +48,7 @@
             <img src="./assets/img/temperature-default.png" alt="couple thermometers with different temperature">
         </div>
         <div class="converter-length cell " id="length-conv">
-            <label for="converter-length">Converter <span class="convert-from">Meter</span> for <span
+            <label for="converter-length">Converter <span class="convert-from">Meter</span> to <span
                     class="convert-to">Feet</span></label>
             <input type="number" class="input" id="converter-length" placeholder="Type number...">
             <p class="result">Result:</p>
@@ -60,7 +60,7 @@
             <img src="./assets/img/lenght-default.webp" alt="measure tape with meters and feet scale">
         </div>
         <div class="converter-speed cell" id="speed-conv">
-            <label for="converter-speed">Converter <span class="convert-from">KM/h</span> for <span
+            <label for="converter-speed">Converter <span class="convert-from">KM/h</span> to <span
                     class="convert-to">M/h</span></label>
             <input type="number" class="input" id="converter-speed" placeholder="Type number...">
             <p class="result">Result:</p>
@@ -71,7 +71,7 @@
             </div>
             <img src="./assets/img/speed-default.jpg" alt="car speed indicator">
         </div>
-    </div>
+    </main>
     <footer><span class="date"></span> &copy; Michal Krawczyk ---02 Project Code Institute---</footer>
     <script src="./assets/js/app.js"></script>
 </body>

@@ -91,8 +91,7 @@ hr {
 	margin-bottom: 1rem;
 }
 
-.wrapper {
-	font-family: "Lato", sans-serif;
+.converters{
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	align-items: center;
@@ -166,7 +165,7 @@ footer{
 /* Media queries */
 
 @media (max-width: 1460px) {
-	.wrapper {
+	.converters {
 		grid-template-columns: 1fr 1fr
         
 	}
@@ -175,7 +174,7 @@ footer{
 	}
 }
 @media (max-width: 970px) {
-	.wrapper {
+	.converters {
 		grid-template-columns: 1fr;
 	}
 	.converter-speed {
