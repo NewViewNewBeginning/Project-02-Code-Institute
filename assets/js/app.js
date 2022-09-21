@@ -65,12 +65,19 @@ function tempConverter(e) {
 	}
 	if (cel > 25 || fahr > 77) {
 		curParent.querySelector("img").src = "./assets/img/summer-hot.jpg";
+		curParent.querySelector("img").alt =
+			"Sun on a clear sky in sunny yellow color";
 	} else if (cel > 15 || fahr > 59) {
 		curParent.querySelector("img").src = "./assets/img/spring-mid-hot.jpg";
+		curParent.querySelector("img").alt =
+			"Green fields with flowers and sun behind clouds";
 	} else if (cel > 8 || fahr > 46) {
 		curParent.querySelector("img").src = "./assets/img/autun-mid-cold.jpg";
+		curParent.querySelector("img").alt =
+			"Benches in the park with leaves which fell from trees  ";
 	} else {
 		curParent.querySelector("img").src = "./assets/img/winter-cold.jpg";
+		curParent.querySelector("img").alt = "Bush covered in ice";
 	}
 }
 
@@ -81,12 +88,15 @@ function lengthConverter(e) {
 	if (curParent.querySelector(".convert-from").textContent === "Meter") {
 		const feet = curParent.querySelector("input").value / 0.3048;
 		curParent.querySelector("img").src = "./assets/img/meter-length.jpg";
+		curParent.querySelector("img").alt =
+			"Elastic measure tape / tailor measuring tape ";
 		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} meters is ${feet.toFixed(2)} feets`;
 	} else {
 		const meter = curParent.querySelector("input").value * 0.3048;
 		curParent.querySelector("img").src = "./assets/img/foot-length.jpg";
+		curParent.querySelector("img").alt = "Bare women feet on the sand beach";
 		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} feets is ${meter.toFixed(2)} meters`;
@@ -100,12 +110,16 @@ function speedConverter(e) {
 	if (curParent.querySelector(".convert-from").textContent === "KM/h") {
 		const miles = curParent.querySelector("input").value * 0.621371;
 		curParent.querySelector("img").src = "./assets/img/km-speed.jpg";
+		curParent.querySelector("img").alt =
+			"Old style car speedometer showing kilometers in hour";
 		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} KM/h is ${miles.toFixed(2)} M/h`;
 	} else {
 		const km = curParent.querySelector("input").value * 1.609344;
 		curParent.querySelector("img").src = "./assets/img/mile-speed.jpg";
+		curParent.querySelector("img").alt =
+			"Speed limit sign with 35 miles per hour";
 		curParent.querySelector("p").textContent = `${
 			curParent.querySelector("input").value
 		} M/h ${km.toFixed(2)} KM/h`;
