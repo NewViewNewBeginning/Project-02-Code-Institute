@@ -7,11 +7,11 @@
 
 3 types converters with images under each describing covertion values.
  
-  -Temperature    Celsius <--> Fahrenheit  
+  - Temperature    Celsius <--> Fahrenheit  
  
-  -Length      Meter <--> Feet
+  - Length      Meter <--> Feet
 
-  -Speed     Kilometers/h <--> Miles/h
+  - Speed     Kilometers/h <--> Miles/h
 
 All functionality is written in pure JavaScript and it's fully responsive to all kinds of devices. 
 
@@ -54,7 +54,7 @@ This site can be used to calculate popular values and in future can be filled wi
 
 ### Features Left to Implement
 
-- Another coverters for other values.
+- Additional coverters for other values.
 
 ## Testing 
 
@@ -65,7 +65,7 @@ I used Mozilla web developer tools and Chrome developer tools throughout the pro
 
 ## Compatibility testing
 
-Site was tested across multiple virtual mobile devices and browsers. I checked all supported devices in both Mozilla web developer tolls and Chrome developer tools.
+Site was tested across multiple virtual mobile devices and browsers. I checked all supported devices in both Mozilla web developer tools and Chrome developer tools.
 
 I tested on hardware devices such as: 14' screen HP laptop, 17' screen Asus laptop, 27' hp monitor, Samsung s20fe, Samsung s7edge and Samsung Note 10.
 
