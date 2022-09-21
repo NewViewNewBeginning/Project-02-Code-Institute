@@ -87,7 +87,7 @@ I run [Lighthouse](https://developers.google.com/web/tools/lighthouse/) tool to 
       - The following metrics were returned: 
       - There are 9 functions in this file.
       - Function with the largest signature takes 1 arguments, while the median is 1.
-      - Largest function has 13 statements in it, while the median is 8.
+      - Largest function has 17 statements in it, while the median is 8.
       - The most complex function has a cyclomatic complexity value of 8 while the median is 2.5.
 
 ### Unfixed Bugs
